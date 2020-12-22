@@ -6,24 +6,23 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.codejava.javaee.bookstore.DAO.BookDAO;
-import net.codejava.javaee.bookstore.entity.Book;
+import net.codejava.javaee.bookstore.DAO.LotteryDAO;
+import net.codejava.javaee.bookstore.entity.Lottery;
 
-public class BookDeleteServlet extends HttpServlet {
+public class LotteryListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private BookDAO bookDAO;
+	private LotteryDAO DAO;
 
 	public void init() {
 		String jdbcURL = getServletContext().getInitParameter("jdbcURL");
 		String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
 		String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
 
-		bookDAO = new BookDAO(jdbcURL, jdbcUsername, jdbcPassword);
+		DAO = new LotteryDAO(jdbcURL, jdbcUsername, jdbcPassword);
 
 	}
 
@@ -36,20 +35,19 @@ public class BookDeleteServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
-			deleteBook(request, response);
+			list(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	private void deleteBook(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
-
-		Book book = new Book(id);
-		bookDAO.deleteBook(book);
-		response.sendRedirect("book");
-
+	private void list(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		List<Lottery> list = DAO.listAll();
+		request.setAttribute("list", list);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("LotteryList.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }

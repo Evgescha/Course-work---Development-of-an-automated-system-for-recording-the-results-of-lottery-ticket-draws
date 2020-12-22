@@ -49,4 +49,17 @@ public class Lottery {
 		this.prize = prize;
 	}
 
+	public Lottery(int id) {
+		super();
+		this.id = id;
+	}
+
+	public Lottery(LotteryType type, Date dates, Prize prize) {
+		super();
+		this.type = type;
+		this.dates = dates;
+		this.prize = prize;
+	}
+	
+
 }

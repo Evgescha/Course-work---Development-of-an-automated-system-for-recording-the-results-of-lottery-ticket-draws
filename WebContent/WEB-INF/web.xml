@@ -8,7 +8,7 @@
 
 	<context-param>
 		<param-name>jdbcURL</param-name>
-		<param-value>jdbc:mysql://127.0.0.1:3306/bookstore?useUnicode=true&amp;serverTimezone=UTC</param-value>
+		<param-value>jdbc:mysql://127.0.0.1:3306/bookstore?useUnicode=true&amp;serverTimezone=UTC&amp;useSSL=false</param-value>
 	</context-param>
 
 	<context-param>
@@ -20,48 +20,6 @@
 		<param-name>jdbcPassword</param-name>
 		<param-value>1234</param-value>
 	</context-param>
-
-
-
-
-	<servlet>
-		<servlet-name>BookListServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.BookListServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BookListServlet</servlet-name>
-		<url-pattern>/book</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>BookEditServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.BookEditServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BookEditServlet</servlet-name>
-		<url-pattern>/bookEdit</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>BookUpdateServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.BookUpdateServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BookUpdateServlet</servlet-name>
-		<url-pattern>/bookUpdate</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>BookDeleteServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.BookDeleteServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BookDeleteServlet</servlet-name>
-		<url-pattern>/bookDelete</url-pattern>
-	</servlet-mapping>
-
-
-
 
 
 
@@ -91,7 +49,7 @@
 		<servlet-name>LotteryTypeUpdateServlet</servlet-name>
 		<url-pattern>/lotteryTypeUpdate</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>LotteryTypeDeleteServlet</servlet-name>
 		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeDeleteServlet</servlet-class>
@@ -100,8 +58,8 @@
 		<servlet-name>LotteryTypeDeleteServlet</servlet-name>
 		<url-pattern>/lotteryTypeDelete</url-pattern>
 	</servlet-mapping>
-	
-	
+
+
 	<servlet>
 		<servlet-name>PrizeListServlet</servlet-name>
 		<servlet-class>net.codejava.javaee.bookstore.PrizeListServlet</servlet-class>
@@ -128,7 +86,7 @@
 		<servlet-name>PrizeUpdateServlet</servlet-name>
 		<url-pattern>/prizeUpdate</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>PrizeDeleteServlet</servlet-name>
 		<servlet-class>net.codejava.javaee.bookstore.PrizeDeleteServlet</servlet-class>
@@ -137,9 +95,57 @@
 		<servlet-name>PrizeDeleteServlet</servlet-name>
 		<url-pattern>/prizeDelete</url-pattern>
 	</servlet-mapping>
-	
-	
-		
+
+
+
+
+
+	<servlet>
+		<servlet-name>LotteryListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryListServlet</servlet-name>
+		<url-pattern>/lottery</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LotteryEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryEditServlet</servlet-name>
+		<url-pattern>/lotteryEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LotteryUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryUpdateServlet</servlet-name>
+		<url-pattern>/lotteryUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LotteryDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryDeleteServlet</servlet-name>
+		<url-pattern>/lotteryDelete</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
 
 
 	<error-page>
