@@ -145,7 +145,7 @@ p:last-child {
 }
 
 /* form input */
-form input {
+form input, select {
     border: 1px solid #ff6c2b;
     background: #fff;
     padding: 11px 20px;

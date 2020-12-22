@@ -34,7 +34,7 @@
 			    	<th>Лотерея:</th>
 			    	<td><select name="lottery">
 				    	<c:forEach var="type" items="${lotteries}">
-					 		<option name="lottery" value="${type.id}">${type.type.name} ${type.dates}</option>				    		
+					 		<option name="lottery" value="${type.id}">${type.type.name} № ${type.id}(${type.dates})</option>				    		
 				    	</c:forEach>
 					</select>
 					</td>

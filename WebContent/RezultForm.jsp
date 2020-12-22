@@ -34,14 +34,14 @@
 			    	<th>Лотерея:</th>
 			    	<td><select name="lottery">
 				    	<c:forEach var="type" items="${lotteries}">
-					 		<option name="lottery" value="${type.id}">${type.type.name} ${type.dates}</option>				    		
+					 		<option name="lottery" value="${type.id}">${type.type.name} №${type.id} (${type.dates})</option>				    		
 				    	</c:forEach>
 					</select>
 					</td>
             	</tr>
             
             	<tr>
-			    	<th>Номера выигрыша:</th>
+			    	<th>Выигрышная комбинация:</th>
 			    	<td><input type="text" name="numbers" value='${entity.numbers}' ></td>
             	</tr>
             
@@ -49,7 +49,7 @@
 			    	<th>Выигшравший билет:</th>
 			    	<td><select name="winner">
 				    	<c:forEach var="ticket" items="${tickets}">
-					 		<option name="winner" value="${ticket.id}">${ticket.id}-${ticket.numbers}</option>				    		
+					 		<option name="winner" value="${ticket.id}">Билет ${ticket.lottery.type.name} №${ticket.id}, комбинация (${ticket.numbers})</option>				    		
 				    	</c:forEach>
 					</select>
 					</td>

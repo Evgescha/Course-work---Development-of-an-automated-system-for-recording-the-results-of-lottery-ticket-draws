@@ -44,7 +44,7 @@ public class PrizeDAO {
 	public boolean insert(Prize entity) throws SQLException {
 		String sql = "INSERT INTO prize (name,description) VALUES (?,?)";
 		connect();
-
+		System.out.println("INSERT "+entity.getName());
 		PreparedStatement statement = jdbcConnection.prepareStatement(sql);
 		statement.setString(1, entity.getName());
 		statement.setString(2, entity.getDescription());

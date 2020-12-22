@@ -16,6 +16,7 @@ public class PrizeUpdateServlet extends HttpServlet {
 	private PrizeDAO DAO;
 
 	public void init() {
+		
 		String jdbcURL = getServletContext().getInitParameter("jdbcURL");
 		String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
 		String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
@@ -26,12 +27,13 @@ public class PrizeUpdateServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		doGet(request, response);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");
 		try {
 			if (request.getParameter("id") != null)
 				update(request, response);
@@ -46,7 +48,8 @@ public class PrizeUpdateServlet extends HttpServlet {
 	private void insert(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
-
+		System.out.println("PRIZE UPDATE INSERT"+name+" "+description);
+		
 		Prize entity = new Prize(name, description);
 		DAO.insert(entity);
 		response.sendRedirect("prize");
