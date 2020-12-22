@@ -102,6 +102,44 @@
 	</servlet-mapping>
 	
 	
+	<servlet>
+		<servlet-name>PrizeListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.PrizeListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrizeListServlet</servlet-name>
+		<url-pattern>/prize</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PrizeEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.PrizeEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrizeEditServlet</servlet-name>
+		<url-pattern>/prizeEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PrizeUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.PrizeUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrizeUpdateServlet</servlet-name>
+		<url-pattern>/prizeUpdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PrizeDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.PrizeDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrizeDeleteServlet</servlet-name>
+		<url-pattern>/prizeDelete</url-pattern>
+	</servlet-mapping>
+	
+	
+		
 
 
 	<error-page>
