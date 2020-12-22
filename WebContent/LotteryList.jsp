@@ -4,6 +4,21 @@
 <html>
 <head>
 	<title>Лотереи</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.png">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;900&display=swap" rel="stylesheet"> 
+	<!-- end font -->
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/fakeLoader.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
 	<center>
@@ -15,7 +30,6 @@
 	</center>
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h2>Список</h2></caption>
             <tr>
                 <th>ИД</th>
                 <th>Тип</th>

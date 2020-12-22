@@ -4,18 +4,30 @@
 <html>
 <head>
 	<title>Список призов</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.png">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;900&display=swap" rel="stylesheet"> 
+	<!-- end font -->
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/fakeLoader.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
-	<center>
-		<h1>Работа с призами</h1>
-        <h2>
-        	<a href="prizeEdit">Добавить новый тип</a>    	&nbsp;&nbsp;&nbsp;
-        	<a href="prize">Список всех типов</a>        	
-        </h2>
-	</center>
-    <div align="center">
-        <table border="1" cellpadding="5">
-            <caption><h2>Список</h2></caption>
+<jsp:include page="header.html" />
+	
+    <div align="center" class="vission-section section">
+
+		<h1  class="text-center mb-5">Работа с призами</h1>        
+	
+	    <table border="1" cellpadding="5">
             <tr>
                 <th>ИД</th>
                 <th>Название</th>
@@ -27,12 +39,15 @@
                     <td><c:out value="${entity.name}" /></td>
                     <td><c:out value="${entity.description}" /></td>
                     <td>
-                    	<a href="prizeEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
-                    	<a href="prizeDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
+                    	<a class="button button-secondary" href="prizeEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<a class="button button-secondary" href="prizeDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        <h3 class="mt-5">
+        	<a href="prizeEdit" class="button ">Добавить новый приз</a>   	
+        </h3>
     </div>	
 </body>
 </html>
