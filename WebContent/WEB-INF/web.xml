@@ -182,6 +182,41 @@
 
 
 
+	<servlet>
+		<servlet-name>RezultListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.RezultListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RezultListServlet</servlet-name>
+		<url-pattern>/rezult</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RezultEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.RezultEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RezultEditServlet</servlet-name>
+		<url-pattern>/rezultEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RezultUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.RezultUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RezultUpdateServlet</servlet-name>
+		<url-pattern>/rezultUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RezultDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.RezultDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RezultDeleteServlet</servlet-name>
+		<url-pattern>/rezultDelete</url-pattern>
+	</servlet-mapping>
 
 
 
