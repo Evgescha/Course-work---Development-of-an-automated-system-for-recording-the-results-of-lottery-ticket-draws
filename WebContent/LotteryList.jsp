@@ -49,7 +49,7 @@
         </table>
         
         <h3 class="mt-5">
-        	<a href="lottertEdit" class="button ">Добавить новый приз</a>   	
+        	<a href="lottertEdit" class="button ">Добавить новый розыгрыш лотереи</a>   	
         </h3>
     </div>	
 </body>
