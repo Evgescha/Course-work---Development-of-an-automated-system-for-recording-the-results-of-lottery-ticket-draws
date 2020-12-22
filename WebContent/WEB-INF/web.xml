@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Books Management Web Application</display-name>
+
+	<context-param>
+		<param-name>jdbcURL</param-name>
+		<param-value>jdbc:mysql://127.0.0.1:3306/bookstore?useUnicode=true&amp;serverTimezone=UTC</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcPassword</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+
+
+
+
+	<servlet>
+		<servlet-name>BookListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.BookListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookListServlet</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BookEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.BookEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookEditServlet</servlet-name>
+		<url-pattern>/bookEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BookUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.BookUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookUpdateServlet</servlet-name>
+		<url-pattern>/bookUpdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BookDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.BookDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookDeleteServlet</servlet-name>
+		<url-pattern>/bookDelete</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+	<servlet>
+		<servlet-name>LotteryTypeControllerServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryTypeControllerServlet</servlet-name>
+		<url-pattern>/lotteryType</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LotteryControllerServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryControllerServlet</servlet-name>
+		<url-pattern>/lottery</url-pattern>
+	</servlet-mapping>
+
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/Error.jsp</location>
+	</error-page>
+
+</web-app>
