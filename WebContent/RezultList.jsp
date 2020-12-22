@@ -21,16 +21,13 @@
 	
 </head>
 <body>
-	<center>
-		<h1>Работа со списком</h1>
-        <h2>
-        	<a href="rezultEdit">Добавить новый элемент</a>    	&nbsp;&nbsp;&nbsp;
-        	<a href="rezult">Список всех элементов</a>        	
-        </h2>
-	</center>
-    <div align="center">
-        <table border="1" cellpadding="5">
-            <caption><h2>Список результатов розыгрышей</h2></caption>
+<jsp:include page="header.html" />
+	
+    <div align="center" class="vission-section section">
+
+		<h1  class="text-center mb-5">Результаты розыгрышей</h1>        
+	
+	  <table border="1" cellpadding="5">
             <tr>
                 <th>ИД</th>
                 <th>Лотерея</th>
@@ -48,12 +45,16 @@
                     <td><c:out value="${entity.winner.id}" /></td>
                     <td><c:out value="${entity.winner.numbers}" /></td>
                     <td>
-                    	<a href="rezultEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
-                    	<a href="rezultDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
+                    	<a class="button button-secondary" href="rezultEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<a class="button button-secondary" href="rezultDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        
+        <h3 class="mt-5">
+        	<a href="rezultEdit" class="button ">Добавить результат</a>   	
+        </h3>
     </div>	
 </body>
 </html>
