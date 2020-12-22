@@ -21,15 +21,13 @@
 	
 </head>
 <body>
-	<center>
-		<h1>Работа с лотереями</h1>
-        <h2>
-        	<a href="lotteryEdit">Добавить лотерею</a>    	&nbsp;&nbsp;&nbsp;
-        	<a href="lottery">Список всех лотерей</a>        	
-        </h2>
-	</center>
-    <div align="center">
-        <table border="1" cellpadding="5">
+<jsp:include page="header.html" />
+	
+    <div align="center" class="vission-section section">
+
+		<h1  class="text-center mb-5">Работа с Лотереями</h1>        
+	
+	    <table border="1" cellpadding="5">
             <tr>
                 <th>ИД</th>
                 <th>Тип</th>
@@ -43,12 +41,16 @@
                     <td><c:out value="${entity.dates}" /></td>
                     <td><c:out value="${entity.prize.name}" /></td>
                     <td>
-                    	<a href="lotteryEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
-                    	<a href="lotteryDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
+                    	<a  class="button button-secondary" href="lotteryEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<a  class="button button-secondary" href="lotteryDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        
+        <h3 class="mt-5">
+        	<a href="lottertEdit" class="button ">Добавить новый приз</a>   	
+        </h3>
     </div>	
 </body>
 </html>

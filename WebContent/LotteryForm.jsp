@@ -21,21 +21,11 @@
 
 </head>
 <body>
-	<center>
-		<h1>Создание/Редактирование</h1>
-		<h2>
-			<a href="lotteryEdit">Добавить</a> &nbsp;&nbsp;&nbsp;
-			<a href="lottery">Список всех</a>
-		</h2>
-	</center>
-	<div align="center">
-		<form action="lotteryUpdate" method="post">
+	<jsp:include page="header.html" />
+
+	<div align="center"  class="vission-section section">
+	<form action="lotteryUpdate" method="post">
 			<table border="1" cellpadding="5">
-				<caption>
-					<h2>
-						<c:if test="${entity != null}">Редактировать</c:if>
-						<c:if test="${entity == null}">Добавить</c:if>
-					</h2>
 				</caption>
 				<c:if test="${entity != null}">
 					<input type="hidden" name="id" value='${entity.id}' />
@@ -69,10 +59,14 @@
             
             	
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="Сохранить" /></td>
+					<td colspan="2" align="center"><input type="submit" value="Сохранить"  class="button button-secondary w-auto"/></td>
 				</tr>
 			</table>
 		</form>
+		
+		 <h3 class="mt-5">
+        	<a href="lottery" class="button ">Назад</a>   	
+        </h3>
 	</div>
 </body>
 </html>
