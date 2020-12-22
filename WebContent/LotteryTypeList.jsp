@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-	<title>Список типов</title>
+	<title>Виды лотерей</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.png">
@@ -21,16 +21,13 @@
 	
 </head>
 <body>
-	<center>
-		<h1>Работа с типами лотерей</h1>
-        <h2>
-        	<a href="lotteryTypeEdit">Добавить новый тип</a>    	&nbsp;&nbsp;&nbsp;
-        	<a href="lottery_type">Список всех типов</a>        	
-        </h2>
-	</center>
-    <div align="center">
+<jsp:include page="header.html" />
+	
+    <div align="center" class="vission-section section">
+
+		<h1  class="text-center mb-5">Работа с видами лотерей</h1>        
+	
         <table border="1" cellpadding="5">
-            <caption><h2>Список</h2></caption>
             <tr>
                 <th>ИД</th>
                 <th>Название</th>
@@ -40,12 +37,15 @@
                     <td><c:out value="${entity.id}" /></td>
                     <td><c:out value="${entity.name}" /></td>
                     <td>
-                    	<a href="lotteryTypeEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
-                    	<a href="lotteryTypeDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
+                    	<a class="button button-secondary"  href="lotteryTypeEdit?id=<c:out value='${entity.id}' />">Редактировать</a>           	&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<a class="button button-secondary"  href="lotteryTypeDelete?id=<c:out value='${entity.id}' />">Удалить</a>                    	
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        <h3 class="mt-5">
+        	<a href="lotteryTypeEdit" class="button ">Добавить новый вид</a>   	
+        </h3>
     </div>	
 </body>
 </html>

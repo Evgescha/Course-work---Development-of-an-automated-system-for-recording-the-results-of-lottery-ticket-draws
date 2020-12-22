@@ -21,15 +21,10 @@
 
 </head>
 <body>
-	<center>
-		<h1>Создание/Редактирование</h1>
-		<h2>
-			<a href="lotteryTypeEdit">Добавить новый тип</a> &nbsp;&nbsp;&nbsp;
-			<a href="lottery_type">Список всех типов</a>
-		</h2>
-	</center>
-	<div align="center">
-		<form action="lotteryTypeUpdate" method="post">
+	<jsp:include page="header.html" />
+
+	<div align="center"  class="vission-section section">
+	<form action="lotteryTypeUpdate" method="post">
 			<table border="1" cellpadding="5">
 				<caption>
 					<h2>
@@ -41,14 +36,18 @@
 					<input type="hidden" name="id" value="<c:out value='${entity.id}' />" />
 				</c:if>
 				<tr>
-					<th>Название типа:</th>
+					<th>Название вида:</th>
 					<td><input type="text" name="name" size="45" value="<c:out value='${entity.name}' />" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="Сохранить" /></td>
+					<td colspan="2" align="center"><input type="submit" value="Сохранить"  class="button button-secondary w-auto"/></td>
 				</tr>
 			</table>
 		</form>
+		
+		 <h3 class="mt-5">
+        	<a href="lottery_type" class="button ">Назад</a>   	
+        </h3>
 	</div>
 </body>
 </html>
