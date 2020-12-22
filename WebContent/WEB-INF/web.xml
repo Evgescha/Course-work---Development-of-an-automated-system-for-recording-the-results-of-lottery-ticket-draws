@@ -143,6 +143,46 @@
 
 
 
+	<servlet>
+		<servlet-name>TicketListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.TicketListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketListServlet</servlet-name>
+		<url-pattern>/ticket</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TicketEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.TicketEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketEditServlet</servlet-name>
+		<url-pattern>/ticketEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TicketUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.TicketUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketUpdateServlet</servlet-name>
+		<url-pattern>/ticketUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TicketDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.TicketDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketDeleteServlet</servlet-name>
+		<url-pattern>/ticketDelete</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
 
 
 

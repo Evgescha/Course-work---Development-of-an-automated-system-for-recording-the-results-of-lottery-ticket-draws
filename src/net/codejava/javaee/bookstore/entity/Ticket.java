@@ -1,30 +1,27 @@
 package net.codejava.javaee.bookstore.entity;
 
-
-import java.util.Random;
-
 public class Ticket {
-	public static int MAX_NUMBERS = 5;
-	public static int MAX_VALUE_IN_NUMBERS = 5;
 
 	int id;
 	Lottery lottery;
-	int[] numbers;
+	String numbers;
 
-	public Ticket(int id, Lottery lottery, int[] numbers) {
+	public Ticket(int id, Lottery lottery, String numbers) {
 		super();
 		this.id = id;
 		this.lottery = lottery;
 		this.numbers = numbers;
 	}
 
-	public Ticket(int id, Lottery lottery) {
+	public Ticket(int id) {
 		super();
 		this.id = id;
+	}
+
+	public Ticket(Lottery lottery, String numbers) {
+		super();
 		this.lottery = lottery;
-		numbers = new int[MAX_NUMBERS];
-		for (int i = 0; i < numbers.length; i++)
-			numbers[i] = new Random().nextInt(MAX_VALUE_IN_NUMBERS);
+		this.numbers = numbers;
 	}
 
 	public int getId() {
@@ -43,11 +40,11 @@ public class Ticket {
 		this.lottery = lottery;
 	}
 
-	public int[] getNumbers() {
+	public String getNumbers() {
 		return numbers;
 	}
 
-	public void setNumbers(int[] numbers) {
+	public void setNumbers(String numbers) {
 		this.numbers = numbers;
 	}
 
