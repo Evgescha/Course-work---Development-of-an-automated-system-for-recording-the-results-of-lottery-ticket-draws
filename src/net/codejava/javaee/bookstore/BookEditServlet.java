@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.codejava.javaee.bookstore.DAO.BookDAO;
+import net.codejava.javaee.bookstore.entity.Book;
+
 public class BookEditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private BookDAO bookDAO;

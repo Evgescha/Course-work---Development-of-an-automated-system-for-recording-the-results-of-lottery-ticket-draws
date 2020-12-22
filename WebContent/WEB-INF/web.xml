@@ -66,22 +66,42 @@
 
 
 	<servlet>
-		<servlet-name>LotteryTypeControllerServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeControllerServlet</servlet-class>
+		<servlet-name>LotteryTypeListServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeListServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>LotteryTypeControllerServlet</servlet-name>
-		<url-pattern>/lotteryType</url-pattern>
+		<servlet-name>LotteryTypeListServlet</servlet-name>
+		<url-pattern>/lottery_type</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>LotteryControllerServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.LotteryControllerServlet</servlet-class>
+		<servlet-name>LotteryTypeEditServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeEditServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>LotteryControllerServlet</servlet-name>
-		<url-pattern>/lottery</url-pattern>
+		<servlet-name>LotteryTypeEditServlet</servlet-name>
+		<url-pattern>/lotteryTypeEdit</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LotteryTypeUpdateServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryTypeUpdateServlet</servlet-name>
+		<url-pattern>/lotteryTypeUpdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LotteryTypeDeleteServlet</servlet-name>
+		<servlet-class>net.codejava.javaee.bookstore.LotteryTypeDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LotteryTypeDeleteServlet</servlet-name>
+		<url-pattern>/lotteryTypeDelete</url-pattern>
+	</servlet-mapping>
+	
+	
 
 
 	<error-page>

@@ -1,4 +1,4 @@
-package net.codejava.javaee.bookstore;
+package net.codejava.javaee.bookstore.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import net.codejava.javaee.bookstore.entity.Book;
 
 /**
  * AbstractDAO.java

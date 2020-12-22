@@ -1,4 +1,4 @@
-package net.codejava.javaee.bookstore;
+package net.codejava.javaee.bookstore.entity;
 
 /**
  * Book.java

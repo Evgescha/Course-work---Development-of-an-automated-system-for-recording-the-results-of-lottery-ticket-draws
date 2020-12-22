@@ -2,28 +2,25 @@ package net.codejava.javaee.bookstore;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.codejava.javaee.bookstore.DAO.BookDAO;
-import net.codejava.javaee.bookstore.entity.Book;
+import net.codejava.javaee.bookstore.DAO.LotteryTypeDAO;
+import net.codejava.javaee.bookstore.entity.LotteryType;
 
-public class BookDeleteServlet extends HttpServlet {
+public class LotteryTypeDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private BookDAO bookDAO;
+	private LotteryTypeDAO DAO;
 
 	public void init() {
 		String jdbcURL = getServletContext().getInitParameter("jdbcURL");
 		String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
 		String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
 
-		bookDAO = new BookDAO(jdbcURL, jdbcUsername, jdbcPassword);
+		DAO = new LotteryTypeDAO(jdbcURL, jdbcUsername, jdbcPassword);
 
 	}
 
@@ -36,19 +33,19 @@ public class BookDeleteServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
-			deleteBook(request, response);
+			delete(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	private void deleteBook(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+	private void delete(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 
-		Book book = new Book(id);
-		bookDAO.deleteBook(book);
-		response.sendRedirect("book");
+		LotteryType book = new LotteryType(id);
+		DAO.delete(book);
+		response.sendRedirect("lottery_type");
 
 	}
 
