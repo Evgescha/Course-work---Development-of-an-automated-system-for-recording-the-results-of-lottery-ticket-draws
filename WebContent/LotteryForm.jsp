@@ -28,12 +28,12 @@
 			<table border="1" cellpadding="5">
 				</caption>
 				<c:if test="${entity != null}">
-					<input type="hidden" name="id" value='${entity.id}' />
+					<input required type="hidden" name="id" value='${entity.id}' />
 				</c:if>			 
 				   
 			    <tr>
 			    	<th>Тип лотереи:</th>
-			    	<td><select name="lottery_type">
+			    	<td><select required name="lottery_type">
 				    	<c:forEach var="type" items="${lotteryTypes}">
 					 		<option name="lottery_type" value="${type.id}">${type.name}</option>				    		
 				    	</c:forEach>
@@ -43,7 +43,7 @@
             
             	<tr>
 			    	<th>Дата проведения:</th>
-			    	<td><input type="date" name="dates" value='${entity.dates}' ></td>
+			    	<td><input required type="date" name="dates" value='${entity.dates}' ></td>
             	</tr>
             
             

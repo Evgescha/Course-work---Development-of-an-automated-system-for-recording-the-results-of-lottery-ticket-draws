@@ -33,14 +33,14 @@
 					</h2>
 				</caption>
 				<c:if test="${entity != null}">
-					<input type="hidden" name="id" value="<c:out value='${entity.id}' />" />
+					<input required type="hidden" name="id" value="<c:out value='${entity.id}' />" />
 				</c:if>
 				<tr>
 					<th>Название вида:</th>
-					<td><input type="text" name="name" size="45" value="<c:out value='${entity.name}' />" /></td>
+					<td><input required type="text" name="name" size="45" value="<c:out value='${entity.name}' />" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="Сохранить"  class="button button-secondary w-auto"/></td>
+					<td colspan="2" align="center"><input required type="submit" value="Сохранить"  class="button button-secondary w-auto"/></td>
 				</tr>
 			</table>
 		</form>

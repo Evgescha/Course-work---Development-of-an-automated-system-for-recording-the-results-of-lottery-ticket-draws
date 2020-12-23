@@ -32,7 +32,7 @@
 				   
 			    <tr>
 			    	<th>Лотерея:</th>
-			    	<td><select name="lottery">
+			    	<td><select name="lottery" required>
 				    	<c:forEach var="type" items="${lotteries}">
 					 		<option name="lottery" value="${type.id}">${type.type.name} № ${type.id}(${type.dates})</option>				    		
 				    	</c:forEach>
@@ -42,12 +42,12 @@
             
             	<tr>
 			    	<th>Номера в билете:</th>
-			    	<td><input type="text" name="numbers" value='${entity.numbers}' ></td>
+			    	<td><input type="text" name="numbers" value='${entity.numbers}'  required></td>
             	</tr>
             
                        	
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="Сохранить" class="button button-secondary w-auto"/></td>
+					<td colspan="2" align="center"><input type="submit" value="Сохранить" class="button button-secondary w-auto"  required/></td>
 				</tr>
 			</table>
 		</form>

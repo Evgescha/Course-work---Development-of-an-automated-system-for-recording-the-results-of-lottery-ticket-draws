@@ -27,19 +27,19 @@
 		<form action="prizeUpdate" method="post">
 			<table border="1" cellpadding="5">
 				<c:if test="${entity != null}">
-					<input type="hidden" name="id" value="<c:out value='${entity.id}' />" />
+					<input type="hidden" name="id"  required value="<c:out value='${entity.id}' />" />
 				</c:if>
 				<tr>
 					<th>Название приза:</th>
-					<td><input type="text" name="name" size="45" value="<c:out value='${entity.name}' />" /></td>
+					<td><input required type="text" name="name" size="45" value="<c:out value='${entity.name}' />" /></td>
 				</tr>
 				<tr>
 					<th>Описание:</th>
-					<td><input type="text" name="description" size="45" value="<c:out value='${entity.description}' />" /></td>
+					<td><input required type="text" name="description" size="45" value="<c:out value='${entity.description}' />" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" value="Сохранить"  class="button button-secondary w-auto"/>
+						<input required type="submit" value="Сохранить"  class="button button-secondary w-auto"/>
 						</td>
 				</tr>
 			</table>
